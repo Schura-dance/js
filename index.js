@@ -1,18 +1,20 @@
 // Начало проекта
 
-function sum(){
-
-    let sum = 0
+//Первая реализация 
+function evenNumbers(){
+    const evenNumbersArray = []
     for(let i = 0; i < arguments.length; i++){
-        sum += arguments[i]
+        if(arguments[i] % 2 === 0){
+            evenNumbersArray.push(arguments[i])
+        }
     }
-    return sum;
+    return evenNumbersArray;
 }
 
-console.log(sum(1,2,3,4,5))
-console.log(sum())
+console.log(evenNumbers(0,10,22,3,4,5))
 
 
-const sumNew = (...numbers) => numbers.reduce((sum, total) => sum + total, 0)
-console.log(sumNew(1,2,3))
-console.log(sumNew())
+
+//Вторая реализация 
+evenArr = (...numbers) => numbers.filter((num) => num % 2 ==0);
+console.log(evenArr(3,7,1,9,6,5,4,0))
